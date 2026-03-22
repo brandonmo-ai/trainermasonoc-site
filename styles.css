@@ -689,6 +689,7 @@ summary {
   border-bottom: 1px solid var(--border-color);
   border-radius: 0;
   box-shadow: none;
+  background: #ffffff;
 }
 
 .transformation-media img {
@@ -698,12 +699,19 @@ summary {
   object-position: center center;
 }
 
+.transformation-media::before {
+  display: none;
+}
+
 .transformation-media--first img {
   object-position: center 18%;
 }
 
 .transformation-media--second img {
-  object-position: center 28%;
+  width: 92%;
+  height: 92%;
+  margin: auto;
+  object-position: center 22%;
 }
 
 .transformation-media--third img {
