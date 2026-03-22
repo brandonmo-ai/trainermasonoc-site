@@ -688,7 +688,7 @@ summary {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 392px;
+  height: 340px;
   border: 0;
   border-bottom: 0;
   border-radius: 0;
@@ -921,7 +921,7 @@ summary {
   }
 
   .transformation-media {
-    height: 500px;
+    height: 420px;
   }
 }
 
@@ -966,7 +966,7 @@ summary {
   }
 
   .transformation-media {
-    height: 560px;
+    height: 460px;
   }
 
   .hero-card {
