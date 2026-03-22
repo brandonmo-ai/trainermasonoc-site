@@ -142,10 +142,10 @@ summary {
 
 .section-intro h2,
 .hero-card h2,
-.assessment-copy h2,
 .closing-card h2,
 .about-copy h2,
-.fit-card h2 {
+.fit-card h2,
+.assessment-callout__copy h3 {
   margin: 0;
   font-size: 28px;
   line-height: 1.15;
@@ -157,8 +157,6 @@ summary {
 .cta-note,
 .detail-card p,
 .service-card p,
-.process-strip span,
-.assessment-copy p,
 .assessment-note,
 .assessment-card li,
 .transformation-caption p,
@@ -168,7 +166,11 @@ summary {
 .faq-list p,
 .closing-card p,
 .hero-card li,
-.trust-list li {
+.trust-list li,
+.trust-badge p,
+.proof-card p,
+.step-card p,
+.assessment-callout__copy p {
   color: var(--text-secondary);
 }
 
@@ -271,7 +273,6 @@ summary {
 }
 
 .hero-grid,
-.assessment-grid,
 .about-grid,
 .fit-grid {
   display: grid;
@@ -406,6 +407,17 @@ summary {
   gap: 1rem;
 }
 
+.trust-strip,
+.proof-grid,
+.steps-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.trust-strip {
+  margin-top: 1.5rem;
+}
+
 .hero-proof {
   display: grid;
   gap: 0.85rem;
@@ -527,8 +539,12 @@ summary {
 }
 
 .hero-card,
+.trust-badge,
 .detail-card,
+.proof-card,
+.step-card,
 .service-card,
+.assessment-callout,
 .assessment-card,
 .transformation-card,
 .fit-card,
@@ -566,6 +582,56 @@ summary {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.trust-badge,
+.proof-card,
+.step-card {
+  padding: 1.35rem;
+}
+
+.trust-badge span,
+.proof-card__eyebrow,
+.step-card__index {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.trust-badge p,
+.proof-card p,
+.step-card p {
+  margin: 0;
+}
+
+.trust-badge {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 247, 248, 0.95));
+}
+
+.proof-grid {
+  margin-bottom: 1.5rem;
+}
+
+.proof-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 246, 247, 0.95));
+}
+
+.proof-card::before,
+.step-card::before,
+.trust-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(46, 158, 143, 0.7), transparent);
+}
+
 .card-grid {
   display: grid;
   gap: 1rem;
@@ -577,6 +643,12 @@ summary {
 .fit-card,
 .closing-card {
   padding: 1.5rem;
+}
+
+.proof-card h3,
+.step-card h3,
+.assessment-callout__copy h3 {
+  margin: 0 0 0.55rem;
 }
 
 .detail-card {
@@ -627,32 +699,10 @@ summary {
   background: linear-gradient(90deg, transparent, rgba(46, 158, 143, 0.7), transparent);
 }
 
-.process-strip {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.25rem;
-  padding: 1.2rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+.step-card {
+  position: relative;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 248, 0.9));
-  box-shadow: var(--shadow-soft);
-}
-
-.process-strip div {
-  display: grid;
-  gap: 0.2rem;
-}
-
-.process-strip strong {
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--primary-color);
-}
-
-.assessment-grid {
-  align-items: start;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 248, 0.94));
 }
 
 .assessment-card {
@@ -671,6 +721,24 @@ summary {
   display: grid;
   gap: 0.8rem;
   margin-bottom: 1.4rem;
+}
+
+.assessment-callout {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 248, 0.94));
+}
+
+.assessment-callout__copy p {
+  margin: 0;
+  max-width: 54ch;
+}
+
+.assessment-callout__copy .eyebrow {
+  margin-bottom: 0.65rem;
 }
 
 .assessment-note {
@@ -886,7 +954,6 @@ summary {
   }
 
   .hero-grid,
-  .assessment-grid,
   .about-grid,
   .fit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -922,8 +989,15 @@ summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .process-strip {
+  .trust-strip,
+  .proof-grid,
+  .steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .assessment-callout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
   }
 
   .transformation-grid {
@@ -952,10 +1026,10 @@ summary {
 
   .section-intro h2,
   .hero-card h2,
-  .assessment-copy h2,
   .closing-card h2,
   .about-copy h2,
-  .fit-card h2 {
+  .fit-card h2,
+  .assessment-callout__copy h3 {
     font-size: 36px;
   }
 
@@ -963,8 +1037,13 @@ summary {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .process-strip {
+  .trust-strip {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .proof-grid,
+  .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .transformation-grid {
