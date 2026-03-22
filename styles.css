@@ -664,7 +664,7 @@ summary {
 .transformation-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .transformation-card {
@@ -673,6 +673,7 @@ summary {
   height: 100%;
   overflow: hidden;
   padding: 0;
+  border-radius: 20px;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
@@ -689,7 +690,8 @@ summary {
   border-bottom: 1px solid var(--border-color);
   border-radius: 0;
   box-shadow: none;
-  background: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(248, 249, 250, 0.98));
 }
 
 .transformation-media img {
@@ -723,8 +725,8 @@ summary {
   flex: 1;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 96px;
-  padding: 0.9rem 1.25rem 1.15rem;
+  min-height: 88px;
+  padding: 0.7rem 1.25rem 1rem;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(246, 248, 249, 0.95));
 }
@@ -732,6 +734,14 @@ summary {
 .transformation-caption h3,
 .transformation-caption p {
   margin-top: 0;
+}
+
+.transformation-caption h3 {
+  margin-bottom: 0.35rem;
+}
+
+.transformation-caption p {
+  margin-bottom: 0;
 }
 
 .about-grid {
