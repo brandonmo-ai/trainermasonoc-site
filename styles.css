@@ -276,6 +276,10 @@ summary {
   gap: 1.5rem;
 }
 
+.hero-visual {
+  order: -1;
+}
+
 .hero-copy h1 {
   margin: 0 0 1.25rem;
   font-size: 40px;
@@ -876,6 +880,10 @@ summary {
 
   .hero-grid {
     align-items: center;
+  }
+
+  .hero-visual {
+    order: 0;
   }
 
   .hero-actions {
