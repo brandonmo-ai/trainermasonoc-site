@@ -702,8 +702,11 @@ summary {
 }
 
 .transformation-media {
-  display: block;
-  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  aspect-ratio: 9 / 14;
+  width: 100%;
   border: 0;
   border-bottom: 0;
   border-radius: 0;
@@ -713,10 +716,9 @@ summary {
 
 .transformation-media img {
   width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: initial;
-  object-position: initial;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 .transformation-media::before {
