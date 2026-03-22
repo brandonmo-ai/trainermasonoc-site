@@ -685,10 +685,8 @@ summary {
 }
 
 .transformation-media {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 340px;
+  display: block;
+  height: auto;
   border: 0;
   border-bottom: 0;
   border-radius: 0;
@@ -698,25 +696,14 @@ summary {
 
 .transformation-media img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+  height: auto;
+  max-height: none;
+  object-fit: initial;
+  object-position: initial;
 }
 
 .transformation-media::before {
   display: none;
-}
-
-.transformation-media--first img {
-  object-position: center bottom;
-}
-
-.transformation-media--second img {
-  object-position: center bottom;
-}
-
-.transformation-media--third img {
-  object-position: center bottom;
 }
 
 .transformation-caption {
@@ -919,10 +906,6 @@ summary {
   .transformation-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .transformation-media {
-    height: 420px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -963,10 +946,6 @@ summary {
 
   .transformation-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .transformation-media {
-    height: 460px;
   }
 
   .hero-card {
