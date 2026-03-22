@@ -673,7 +673,7 @@ summary {
   height: 100%;
   overflow: hidden;
   padding: 0;
-  border-radius: 20px;
+  border-radius: 16px;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
@@ -687,11 +687,10 @@ summary {
 .transformation-media {
   height: 420px;
   border: 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 0;
   border-radius: 0;
   box-shadow: none;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(248, 249, 250, 0.98));
+  background: transparent;
 }
 
 .transformation-media img {
@@ -710,10 +709,7 @@ summary {
 }
 
 .transformation-media--second img {
-  width: 88%;
-  height: 88%;
-  margin: auto;
-  object-position: center 18%;
+  object-position: center 14%;
 }
 
 .transformation-media--third img {
@@ -726,9 +722,8 @@ summary {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 88px;
-  padding: 0.7rem 1.25rem 1rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(246, 248, 249, 0.95));
+  padding: 0.35rem 1.25rem 1rem;
+  background: var(--section-bg);
 }
 
 .transformation-caption h3,
