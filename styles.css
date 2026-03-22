@@ -695,7 +695,19 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: center top;
+  object-position: center center;
+}
+
+.transformation-media--first img {
+  object-position: center 18%;
+}
+
+.transformation-media--second img {
+  object-position: center 28%;
+}
+
+.transformation-media--third img {
+  object-position: center 18%;
 }
 
 .transformation-caption {
