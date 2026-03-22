@@ -154,10 +154,12 @@ summary {
 
 .section-intro p,
 .hero-subhead,
+.cta-note,
 .detail-card p,
 .service-card p,
 .process-strip span,
 .assessment-copy p,
+.assessment-note,
 .assessment-card li,
 .transformation-caption p,
 .about-copy p,
@@ -302,6 +304,12 @@ summary {
   align-items: flex-start;
   gap: 1rem;
   margin-top: 1.9rem;
+}
+
+.cta-note {
+  margin: 1rem 0 0;
+  max-width: 40rem;
+  font-size: 0.95rem;
 }
 
 .button {
@@ -663,6 +671,11 @@ summary {
   display: grid;
   gap: 0.8rem;
   margin-bottom: 1.4rem;
+}
+
+.assessment-note {
+  margin: 0 0 1.2rem;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .transformation-grid {
